@@ -1,0 +1,53 @@
+:root
+{
+    --green-light:#00A687;
+    --blue-light:#7C8BF2;
+    --orange-light:#DD7742;
+    --blue-strong:#3936A6;
+    --light-white:#E0E0E0;
+}
+
+
+
+.questionBox
+{
+   margin-top: 25vh;
+}
+
+
+
+
+
+/* START INPUTS AND LABBEL  */
+
+.form__labbel
+{
+    color: var(--blue-strong);
+    font-weight: 500;
+}
+
+/* END INPUTS AND LABBELS  */
+
+
+
+
+
+/*start bottoms */
+
+.form__buttom-next
+{
+    background-color: var(--blue-light);
+
+    /* styles on font of bottom */
+    color:white;
+    font-weight:bold;
+}
+.form__buttom-send
+{
+    
+    background-color:var(--green-light);
+    color: white;
+    font-weight: bold;
+}
+
+/* end bottoms */
