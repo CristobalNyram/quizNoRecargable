@@ -9,9 +9,16 @@
 
 
 
+
+
+
 .questionBox
 {
-   margin-top: 25vh;
+    -webkit-box-shadow: 11px 7px 8px 1px rgba(124,139,242,1);
+    -moz-box-shadow: 11px 7px 8px 1px rgba(124,139,242,1);
+     box-shadow: 11px 7px 8px 1px rgba(124,139,242,1);
+  
+     margin-top: 25vh;
 }
 
 
@@ -34,6 +41,7 @@
 
 /*start bottoms */
 
+
 .form__buttom-next
 {
     background-color: var(--blue-light);
@@ -42,6 +50,10 @@
     color:white;
     font-weight:bold;
 }
+
+
+
+
 .form__buttom-send
 {
     
