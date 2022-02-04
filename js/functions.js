@@ -49,6 +49,7 @@ function changeVisibility(boxStay,boxNext)
     boxStay.style.display="none";
     boxNext.style.display="";
 
+   
     
 }
 
@@ -67,7 +68,9 @@ form.addEventListener('submit',function(event)
          btnNext1.addEventListener('click',function(event){
             console.log("envias");
 
-            changeVisibility( box1,box2);
+        
+
+                  changeVisibility( box1,box2);
           
 
                     btnNext2.addEventListener('click',function(event){
@@ -148,28 +151,28 @@ form.addEventListener('submit',function(event)
                                                                                                                                         
                                                                                                                                         })  
 
-                                                                                                                                        btnNext15.addEventListener('click',function(event){
-                                                                                                                                            changeVisibility( box15,box16);
-                                                                                                                                            
-                                                                                                                                        
-                                                                                                                                        })  
-
-                                                                                                                                        btnNext16.addEventListener('click',function(event){
-                                                                                                                                            changeVisibility( box16,box17);
-                                                                                                                                            
-                                                                                                                                        
-                                                                                                                                        })  
-                                                                                                                                                btnNext17.addEventListener('click',function(event){
-                                                                                                                                                    changeVisibility( box17,box18);
+                                                                                                                                                btnNext15.addEventListener('click',function(event){
+                                                                                                                                                    changeVisibility( box15,box16);
                                                                                                                                                     
                                                                                                                                                 
-                                                                                                                                                })
+                                                                                                                                                })  
 
-                                                                                                                                                        btnNext18.addEventListener('click',function(event){
-                                                                                                                                                            changeVisibility( box18,box19);
+                                                                                                                                                        btnNext16.addEventListener('click',function(event){
+                                                                                                                                                            changeVisibility( box16,box17);
                                                                                                                                                             
                                                                                                                                                         
-                                                                                                                                                        })
+                                                                                                                                                        })  
+                                                                                                                                                                btnNext17.addEventListener('click',function(event){
+                                                                                                                                                                    changeVisibility( box17,box18);
+                                                                                                                                                                    
+                                                                                                                                                                
+                                                                                                                                                                })
+
+                                                                                                                                                                        btnNext18.addEventListener('click',function(event){
+                                                                                                                                                                            changeVisibility( box18,box19);
+                                                                                                                                                                    
+                                                                                                                                                                
+                                                                                                                                                                })
 
 
 

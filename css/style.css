@@ -51,6 +51,12 @@
     font-weight:bold;
 }
 
+.form__buttom-next:hover
+{
+    color:white;
+    background-color:var(--green-light);
+    font-weight:720;
+}
 
 
 
