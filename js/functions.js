@@ -70,15 +70,30 @@ function changeVisibility(boxStay,boxNext)
             var nombreAlumno=document.getElementById('nombreAlumno').value;
             var apellidoPaAlumno=document.getElementById('apellidoPaAlumno').value;
             var apellidoMaAlumno=document.getElementById('apellidoMaAlumno').value;
+            var generoAlumno =document.querySelector('input[name=GeneroAlumno]:checked').value;
+            var edadAlumno =document.getElementById('edadAlumno').value;
+
+            
             var matriculaAlumno=document.getElementById('MatriculaAlumno').value;
-            var programaEducativoAlumno=document.getElementById('programaEducativoAlumno').value;
-            var numeroTelefono=document.getElementById('TelefonoAlumno').value;
             var curpAlumno =document.getElementById('CurpAlumno').value;
-            // 
+
            
+           
+            
+            var programaEducativoAlumno=document.getElementById('programaEducativoAlumno').value;
+            var cuatrimestreAlumno = document.getElementById('CuatrimestreAlumno').value;
+
+            var numeroTelefono=document.getElementById('TelefonoAlumno').value;
+            // 
+            
+            console.log(generoAlumno);
 
             // inicio de validacion de datos del alumno
-           if(nombreAlumno===''|| apellidoPaAlumno==='' || apellidoMaAlumno===''|| matriculaAlumno===''|| curpAlumno===''|| numeroTelefono==='' || programaEducativoAlumno===0 )
+           if(
+            nombreAlumno===''|| apellidoPaAlumno==='' || apellidoMaAlumno===''|| matriculaAlumno===''|| curpAlumno===''|| numeroTelefono==='' || 
+              programaEducativoAlumno===0 || edadAlumno === '' || cuatrimestreAlumno === 0 
+           
+           )
            {
                alertify.error('Los campos deben ser llenados,no puede dejar campos vacios.');
            
@@ -90,28 +105,53 @@ function changeVisibility(boxStay,boxNext)
                        
                 var digitosPermiidoEnUnaCurp=18;
                 var AnchoDeLaCurpRecibida= (curpAlumno.length);
-                       
+                        //evaluamos la curp
                         if(AnchoDeLaCurpRecibida==digitosPermiidoEnUnaCurp)
                         {
 
                             // console.log(curpAlumno);
                             // console.log(Boolean(AnchoDeLaCurpRecibida==digitosPermiidoEnUnaCurp));
-                                if(numeroTelefono.length>=10)
+                              
+                                //evaluamos el numero de telefono
+                            if(numeroTelefono.length>=10)
                                 {
                                     //  console.log(numeroTelefono.length);
-
+                                    //evaluamos el la matricula
                                     if(matriculaAlumno.length >=12)
                                     {
+                                        //evaluamos que seleccione algun programa educativo
+                                            if(programaEducativoAlumno>=1)
+                                            {
+                                                    //evaluamos que el alumno seleccione un cuatrimestres
+                                                    if(cuatrimestreAlumno>=1)
+                                                    {
 
-                                        if(programaEducativoAlumno>=1)
-                                        {
-                                            changeVisibility( box0,box1);
-                                        }
-                                        else
-                                        {
-                                            alertify.error('Debe seleccionar el programa educativo correspondite.');
 
-                                        }
+                                                        //evaluamos que el alumno no ingrese una edad irreal
+                                                        if(edadAlumno <=14 || edadAlumno >=70 )
+                                                        {
+                                                            changeVisibility( box0,box1);
+                                                        }
+                                                        else
+                                                        {
+                                                            alertify.error('La edad que ingreso en incorrecta.');
+                                                        }
+                                                        
+
+                                                    }
+                                                    else
+                                                    {
+                                                        alertify.error('Debe seleccionar el cuatrimestre en el que se encuentra.');
+
+                                                    }
+
+                                                //changeVisibility( box0,box1);
+                                            }
+                                            else
+                                            {
+                                                alertify.error('Debe seleccionar el programa educativo correspondite.');
+
+                                            }
                                         // 
 
                                     }
