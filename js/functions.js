@@ -71,10 +71,14 @@ function changeVisibility(boxStay,boxNext)
             var apellidoPaAlumno=document.getElementById('apellidoPaAlumno').value;
             var apellidoMaAlumno=document.getElementById('apellidoMaAlumno').value;
             var matriculaAlumno=document.getElementById('MatriculaAlumno').value;
-            // 
+            var programaEducativoAlumno=document.getElementById('programaEducativoAlumno').value;
+            var numeroTelefono=document.getElementById('TelefonoAlumno').value;
             var curpAlumno =document.getElementById('CurpAlumno').value;
+            // 
+           
 
-           if(nombreAlumno===''|| apellidoPaAlumno==='' || apellidoMaAlumno===''|| matriculaAlumno===''|| curpAlumno==='')
+            // inicio de validacion de datos del alumno
+           if(nombreAlumno===''|| apellidoPaAlumno==='' || apellidoMaAlumno===''|| matriculaAlumno===''|| curpAlumno===''|| numeroTelefono==='' || programaEducativoAlumno===0 )
            {
                alertify.error('Los campos deben ser llenados,no puede dejar campos vacios.');
            
@@ -82,19 +86,59 @@ function changeVisibility(boxStay,boxNext)
            }
            else
            {
-                        var digitosPermiidoEnUnaCurp=18;
-                        if(curpAlumno.length===digitosPermiidoEnUnaCurp)
+                
+                       
+                var digitosPermiidoEnUnaCurp=18;
+                var AnchoDeLaCurpRecibida= (curpAlumno.length);
+                       
+                        if(AnchoDeLaCurpRecibida==digitosPermiidoEnUnaCurp)
                         {
-                                changeVisibility( box0,box1);
+
+                            // console.log(curpAlumno);
+                            // console.log(Boolean(AnchoDeLaCurpRecibida==digitosPermiidoEnUnaCurp));
+                                if(numeroTelefono.length>=10)
+                                {
+                                    //  console.log(numeroTelefono.length);
+
+                                    if(matriculaAlumno.length >=12)
+                                    {
+
+                                        if(programaEducativoAlumno>=1)
+                                        {
+                                            changeVisibility( box0,box1);
+                                        }
+                                        else
+                                        {
+                                            alertify.error('Debe seleccionar el programa educativo correspondite.');
+
+                                        }
+                                        // 
+
+                                    }
+                                    else
+                                    {
+                                        alertify.error('Error al ingresar la matricula');
+                                    }
+
+                                }
+                                else
+                                {
+                                    // console.log(numeroTelefono.length);
+                                    alertify.error('Erro en el campo de numero de telefono');
+
+                                }
                         }
                         else
                         {
+                            // console.log(curpAlumno.length);
+                            // console.log(Boolean(AnchoDeLaCurpRecibida==digitosPermiidoEnUnaCurp));
                             
                             alertify.error('Tu CURP esta incorrecta');
                         }
 
                         //
            }
+            // fin de validacion de datos del alumno
 
             
             
