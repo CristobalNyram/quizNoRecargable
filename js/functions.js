@@ -82,8 +82,18 @@ function changeVisibility(boxStay,boxNext)
            }
            else
            {
-    
-             changeVisibility( box0,box1);
+                        var digitosPermiidoEnUnaCurp=18;
+                        if(curpAlumno.length===digitosPermiidoEnUnaCurp)
+                        {
+                                changeVisibility( box0,box1);
+                        }
+                        else
+                        {
+                            
+                            alertify.error('Tu CURP esta incorrecta');
+                        }
+
+                        //
            }
 
             
