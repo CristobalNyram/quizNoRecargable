@@ -63,7 +63,31 @@ function changeVisibility(boxStay,boxNext)
 
         btnNext0.addEventListener('click',function()
         {
-            changeVisibility( box0,box1);
+            var nombreAlumno=document.getElementById('nombreAlumno').value;
+            var apellidoPaAlumno=document.getElementById('apellidoPaAlumno').value;
+            var apellidoMaAlumno=document.getElementById('apellidoMaAlumno').value;
+            var matriculaAlumno=document.getElementById('MatriculaAlumno').value;
+            var comprobantePdfAlumno=document.getElementById('CombrobanteVacunaAlumno').value;
+            var curpAlumno =document.getElementById('CurpAlumno').value;
+
+           if(nombreAlumno===''|| apellidoPaAlumno==='' || apellidoMaAlumno===''|| matriculaAlumno==='' || comprobantePdfAlumno==='' || curpAlumno==='')
+           {
+               alertify.error('Los campos deben ser llenados,no puede dejar campos vacios.');
+           
+
+           }
+           else
+           {
+    
+             changeVisibility( box0,box1);
+           }
+
+            
+            
+
+
+
+
 
         })
     
@@ -211,7 +235,83 @@ function changeVisibility(boxStay,boxNext)
 
             function sendData()
             {
+               
+
+                let $form =document.querySelector('#cuestionario_covid');
+                let formData = new FormData($form);
                 
+                let nombreAlumno= formData.get('nombreAlumno');
+                let apellidoPaAlumnos = formData.get('apellidoPaAlumno');
+                let apellidoMaAlumno=formData.get('apellidoMaAlumno');
+                let matriculaAlumno=formData.get('MatriculaAlumno');
+                let curpAlumno=formData.get('CurpAlumno');
+                let comprobantePdfAlumno=formData.get('CombrobanteVacunaAlumno');
+              
+                //dataAlumno
+                let alumnoData=
+                {
+                    "nombre" : nombreAlumno,
+                    "apellidoPaterno": apellidoPaAlumnos,
+                    "apellidoMaterno": apellidoMaAlumno,
+                    "matricula":matriculaAlumno,
+                    "curp":curpAlumno,
+                    "pdf":comprobantePdfAlumno
+                };
+
+                let cuesRespuesta1 =document.querySelector('input[name=p1]:checked').value;
+                let cuesRespuesta2 =document.querySelector('input[name=p2]:checked').value;
+                let cuesRespuesta3 =document.querySelector('input[name=p3]:checked').value;
+                let cuesRespuesta4 =document.querySelector('input[name=p4]:checked').value;
+                let cuesRespuesta5 =document.querySelector('input[name=p5]:checked').value;
+                let cuesRespuesta6 =document.querySelector('input[name=p6]:checked').value;
+                let cuesRespuesta7 =document.querySelector('input[name=p7]:checked').value;
+                let cuesRespuesta8 =document.querySelector('input[name=p8]:checked').value;
+                let cuesRespuesta9 =document.querySelector('input[name=p9]:checked').value;
+                let cuesRespuesta10 =document.querySelector('input[name=p10]:checked').value;
+                let cuesRespuesta11 =document.querySelector('input[name=p11]:checked').value;
+                let cuesRespuesta12 =document.querySelector('input[name=p12]:checked').value;
+                let cuesRespuesta13 =document.querySelector('input[name=p13]:checked').value;
+                let cuesRespuesta14 =document.querySelector('input[name=p14]:checked').value;
+                let cuesRespuesta15 =document.querySelector('input[name=p15]:checked').value;
+                let cuesRespuesta16 =document.querySelector('input[name=p16]:checked').value;
+                let cuesRespuesta17 =document.querySelector('input[name=p17]:checked').value;
+                let cuesRespuesta18 =document.querySelector('#p18').value;
+
+                let respuestas =
+                [
+                    cuesRespuesta1,
+                    cuesRespuesta2,
+                    cuesRespuesta3,
+                    cuesRespuesta4,
+                    cuesRespuesta5,
+                    cuesRespuesta6,
+                    cuesRespuesta7,
+                    cuesRespuesta8,
+                    cuesRespuesta9,
+                    cuesRespuesta10,
+                    cuesRespuesta11,
+                    cuesRespuesta12,
+                    cuesRespuesta13,
+                    cuesRespuesta14,
+                    cuesRespuesta15,
+                    cuesRespuesta16,
+                    cuesRespuesta17,
+                    cuesRespuesta18
+                ];
+
+                
+
+
+
+                
+                
+                //recogiendo las respuestas 
+              
+                // console.log(nombreAlumno);
+                debugger;
+
+
+                // console.log(formulario);
 
             }
 
