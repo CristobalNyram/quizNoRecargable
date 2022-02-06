@@ -308,7 +308,7 @@ function changeVisibility(boxStay,boxNext)
                 //recogiendo las respuestas 
               
                 // console.log(nombreAlumno);
-                debugger;
+                
 
 
                 // console.log(formulario);
