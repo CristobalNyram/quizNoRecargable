@@ -67,10 +67,10 @@ function changeVisibility(boxStay,boxNext)
             var apellidoPaAlumno=document.getElementById('apellidoPaAlumno').value;
             var apellidoMaAlumno=document.getElementById('apellidoMaAlumno').value;
             var matriculaAlumno=document.getElementById('MatriculaAlumno').value;
-            var comprobantePdfAlumno=document.getElementById('CombrobanteVacunaAlumno').value;
+            // var comprobantePdfAlumno=document.getElementById('CombrobanteVacunaAlumno').value;
             var curpAlumno =document.getElementById('CurpAlumno').value;
 
-           if(nombreAlumno===''|| apellidoPaAlumno==='' || apellidoMaAlumno===''|| matriculaAlumno==='' || comprobantePdfAlumno==='' || curpAlumno==='')
+           if(nombreAlumno===''|| apellidoPaAlumno==='' || apellidoMaAlumno===''|| matriculaAlumno===''|| curpAlumno==='')
            {
                alertify.error('Los campos deben ser llenados,no puede dejar campos vacios.');
            
