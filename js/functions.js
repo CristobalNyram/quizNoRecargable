@@ -3,6 +3,7 @@
 const form = document.getElementById('cuestionario_covid');
 
 //get of all bottoms
+var btnNext0 = document.getElementById('btn-next0');
 var btnNext1 = document.getElementById('btn-next1');
 var btnNext2 = document.getElementById('btn-next2');
 var btnNext3 = document.getElementById('btn-next3');
@@ -25,6 +26,7 @@ var btnNext18 = document.getElementById('btn-next18');
 
 
 //get of all boxes of questions
+var box0 =document.getElementById('box0');
 var box1 =document.getElementById('box1');
 var box2 =document.getElementById('box2');
 var box3 =document.getElementById('box3');
@@ -59,9 +61,12 @@ function changeVisibility(boxStay,boxNext)
 
 
 
+        btnNext0.addEventListener('click',function()
+        {
+            changeVisibility( box0,box1);
 
-    //with this funtion stop the bottom "siguiente"
-  
+        })
+    
 
          btnNext1.addEventListener('click',function(){
 

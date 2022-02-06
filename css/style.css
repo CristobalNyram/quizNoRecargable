@@ -36,9 +36,9 @@ footer{
 
 .questionBox
 {
-    -webkit-box-shadow: 19px 20px 3px -13px rgba(225,108,12,1);
-    -moz-box-shadow: 19px 20px 3px -13px rgba(225,108,12,1);
-    box-shadow: 19px 20px 3px -13px rgba(225,108,12,1);
+        -webkit-box-shadow: 19px 20px 3px -13px rgba(225,108,12,1);
+        -moz-box-shadow: 19px 20px 3px -13px rgba(225,108,12,1);
+     box-shadow: 19px 20px 3px -13px rgba(225,108,12,1);
      margin-top: 10vh;
 }
 
