@@ -20,6 +20,8 @@ var btnNext13 = document.getElementById('btn-next13');
 var btnNext14 = document.getElementById('btn-next14');
 var btnNext15 = document.getElementById('btn-next15');
 var btnNext16 = document.getElementById('btn-next16');
+var btnNext16_1 = document.getElementById('btn-next16_1');
+
 var btnNext17 = document.getElementById('btn-next17');
 var btnNext18 = document.getElementById('btn-next18');
 
@@ -43,6 +45,8 @@ var box13 =document.getElementById('box13');
 var box14 =document.getElementById('box14');
 var box15 =document.getElementById('box15');
 var box16 =document.getElementById('box16');
+var box16_1 =document.getElementById('box16_1');
+
 var box17 =document.getElementById('box17');
 var box18 =document.getElementById('box18');
 var box19 =document.getElementById('box19');
@@ -67,7 +71,7 @@ function changeVisibility(boxStay,boxNext)
             var apellidoPaAlumno=document.getElementById('apellidoPaAlumno').value;
             var apellidoMaAlumno=document.getElementById('apellidoMaAlumno').value;
             var matriculaAlumno=document.getElementById('MatriculaAlumno').value;
-            // var comprobantePdfAlumno=document.getElementById('CombrobanteVacunaAlumno').value;
+            // 
             var curpAlumno =document.getElementById('CurpAlumno').value;
 
            if(nombreAlumno===''|| apellidoPaAlumno==='' || apellidoMaAlumno===''|| matriculaAlumno===''|| curpAlumno==='')
@@ -205,9 +209,37 @@ function changeVisibility(boxStay,boxNext)
 
             btnNext16.addEventListener('click',function(){
             var cuesRespuesta16 =document.querySelector('input[name=p16]:checked').value;
-            changeVisibility( box16,box17);
+          
+            if(cuesRespuesta16==1)
+            {
+                changeVisibility( box16,box16_1);
+            }
+            else
+            {
+                changeVisibility( box16,box17);
+            }
                                                                                                                                                                     
-            })  
+            })
+
+
+            btnNext16_1.addEventListener('click',function(){
+                var comprobantePdfAlumno=document.getElementById('CombrobanteVacunaAlumno').value;                
+                if(comprobantePdfAlumno==='')
+                {
+                    alertify.error('Suba su comprobante,por favor');
+
+                }
+                else
+                {
+                    changeVisibility( box16_1,box17);
+                }
+                
+
+            })
+                
+                
+
+
             btnNext17.addEventListener('click',function(){
                                                                                                                                                                             
                                                                                                                                                                             var cuesRespuesta17 = document.querySelector('input[name=p17]:checked').value;
@@ -309,8 +341,8 @@ function changeVisibility(boxStay,boxNext)
               
                 // console.log(nombreAlumno);
                 
-
-
+                console.log(alumnoData,respuestas);
+                debugger;
                 // console.log(formulario);
 
             }

@@ -48,16 +48,10 @@
 
                                         <div class="form-group m-4">
                                             <label for="CurpAlumno">CURP</label>
-                                            <input type="texxt" class="form-control mt-2" id="CurpAlumno" name="CurpAlumno" pattern="[0-9]" placeholder="Ingresa tu matrícula" pattern="{17-19}" required>
+                                            <input type="texxt" class="form-control mt-2" id="CurpAlumno" name="CurpAlumno" pattern="[0-9]" placeholder="Ingresa tu matrícula" pattern="{17-19}"  minlength="18" required>
                                         </div>
 
-                                        <div class="form-group m-4">
-                                            <label for="CombrobanteVacunaAlumno">Comprobante de vacunación</label>
-                                            <input type="file" class="form-control mt-2" id="CombrobanteVacunaAlumno" name="CombrobanteVacunaAlumno" pattern="[0-9]" placeholder="Ingresa tu CURP" accept="application/pdf" required>
-                                            
-                                            
-                                       
-                                        </div>
+                                   
                                     
 
 
@@ -627,6 +621,29 @@
                                             <a id="btn-next16" type="" class="btn form__buttom-next">Siguiente</a>
                                         </div>
                                     </div>
+
+                                    <div  id="box16_1" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;">
+                                        
+                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
+                                                <p class="">Sube tu comprobante de vacunación</p>
+                                        </label>
+                                       
+                                             
+
+                                                  <div class="form-group m-4">
+                                                    <label for="CombrobanteVacunaAlumno">Comprobante de vacunación</label>
+                                                    <input type="file" class="form-control mt-2" id="CombrobanteVacunaAlumno" name="CombrobanteVacunaAlumno" pattern="[0-9]" placeholder="" accept="application/pdf" required>
+                                                    
+                                                    
+                                               
+                                                </div>
+
+
+                                        <div class=" d-flex justify-content-end  me-2 mb-2">
+                                            <a id="btn-next16_1" type="" class="btn form__buttom-next">Siguiente</a>
+                                        </div>
+                                    </div>
+
 
 
                                     
