@@ -17,11 +17,22 @@
     height: 15vh;
     background: rgb(0,168,135);
     background: linear-gradient(90deg, rgba(0,168,135,1) 0%, rgba(255,255,255,0.9752275910364145) 100%);
-}
+    -webkit-box-shadow: 0px 10px 13px -11px rgba(0,166,135,1);
+    -moz-box-shadow: 0px 10px 13px -11px rgba(0,166,135,1);
+    box-shadow: 0px 10px 13px -11px rgba(0,166,135,1);
+}    
+
+
+
+
 footer{
 
    bottom:0px;
    height: 5vh;
+
+   -webkit-box-shadow: 0px -10px 13px -11px rgba(0,166,135,1);
+    -moz-box-shadow: 0px -10px 13px -11px rgba(0,166,135,1);
+    box-shadow: 0px -10px 13px -11px rgba(0,166,135,1);
    
 }
 
