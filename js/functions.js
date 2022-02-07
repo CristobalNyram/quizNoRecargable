@@ -62,7 +62,7 @@ function changeVisibility(boxStay,boxNext)
 
 
 
-
+    /*
 
 
         btnNext0.addEventListener('click',function()
@@ -128,7 +128,7 @@ function changeVisibility(boxStay,boxNext)
 
 
                                                         //evaluamos que el alumno no ingrese una edad irreal
-                                                        if(edadAlumno <=14 || edadAlumno >=70 )
+                                                        if(edadAlumno >=14 & edadAlumno<= 70 )
                                                         {
                                                             changeVisibility( box0,box1);
                                                         }
@@ -182,12 +182,11 @@ function changeVisibility(boxStay,boxNext)
 
             
             
+        
 
 
 
-
-
-        })
+        })*/
     
 
          btnNext1.addEventListener('click',function(){
@@ -359,30 +358,9 @@ function changeVisibility(boxStay,boxNext)
 
 
 
-            function sendData()
+            function sendDataForm()
             {
                
-
-                let $form =document.querySelector('#cuestionario_covid');
-                let formData = new FormData($form);
-                
-                let nombreAlumno= formData.get('nombreAlumno');
-                let apellidoPaAlumnos = formData.get('apellidoPaAlumno');
-                let apellidoMaAlumno=formData.get('apellidoMaAlumno');
-                let matriculaAlumno=formData.get('MatriculaAlumno');
-                let curpAlumno=formData.get('CurpAlumno');
-                let comprobantePdfAlumno=formData.get('CombrobanteVacunaAlumno');
-              
-                //dataAlumno
-                let alumnoData=
-                {
-                    "nombre" : nombreAlumno,
-                    "apellidoPaterno": apellidoPaAlumnos,
-                    "apellidoMaterno": apellidoMaAlumno,
-                    "matricula":matriculaAlumno,
-                    "curp":curpAlumno,
-                    "pdf":comprobantePdfAlumno
-                };
 
                 let cuesRespuesta1 =document.querySelector('input[name=p1]:checked').value;
                 let cuesRespuesta2 =document.querySelector('input[name=p2]:checked').value;
@@ -400,6 +378,7 @@ function changeVisibility(boxStay,boxNext)
                 let cuesRespuesta14 =document.querySelector('input[name=p14]:checked').value;
                 let cuesRespuesta15 =document.querySelector('input[name=p15]:checked').value;
                 let cuesRespuesta16 =document.querySelector('input[name=p16]:checked').value;
+                let comprobantePdfAlumno=formData.get('CombrobanteVacunaAlumno');
                 let cuesRespuesta17 =document.querySelector('input[name=p17]:checked').value;
                 let cuesRespuesta18 =document.querySelector('#p18').value;
 
@@ -441,6 +420,51 @@ function changeVisibility(boxStay,boxNext)
 
             }
 
+
+
+            function senDataAlumno()
+            {
+                
+                let $form =document.querySelector('#dataAlumno');
+                let formData = new FormData($form);
+                
+                let nombreAlumno= formData.get('nombreAlumno');
+                let apellidoPaAlumnos = formData.get('apellidoPaAlumno');
+                let apellidoMaAlumno=formData.get('apellidoMaAlumno');
+                let generoAlumno =document.querySelector('input[name=GeneroAlumno]:checked').value;
+                let edadAlumno=formData.get('edadAlumno');
+                let matriculaAlumno=formData.get('MatriculaAlumno');
+                let curpAlumno=formData.get('CurpAlumno');
+                let programaEducativoAlumno =formData.get('programaEducativoAlumno');
+                let cuatrimestreAlumno=formData.get('CuatrimestreAlumno');
+                let numeroTelefono=formData.get('TelefonoAlumno');
+                
+    
+            
+           
+                //dataAlumno
+                let alumnoData=
+                {
+                    
+                    "nombre" : nombreAlumno,
+                    "apellidoPaterno": apellidoPaAlumnos,
+                    "apellidoMaterno": apellidoMaAlumno,
+                    "genero":generoAlumno,
+                    "edad":edadAlumno,
+                    "matricula":matriculaAlumno,
+                    "curp":curpAlumno,
+                    "programaEducativo":programaEducativoAlumno,
+                    "cuatrimestre":cuatrimestreAlumno,
+                    "numeroTelefono":numeroTelefono
+                    
+                   
+                   
+                };
+
+                console.log(alumnoData)
+                debugger;
+
+            }
 
 
 

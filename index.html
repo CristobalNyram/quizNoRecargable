@@ -4,807 +4,148 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuestionario</title>
+    <title>Alumno</title>
 
     <script src="./js/alertify.min.js"> </script>
     <link rel="stylesheet" href="./css/alertify.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
-<body  id="quiz-body" >
-                        <header class="header">
-                            <center>
-                        <img src="images/logo.png" style="max-width: 22rem; margin-top:1.5em">
-                        </center>
-                        </header>
+<body  id="quiz-body">
+    <header class="header">
+        <center>
+    <img src="images/logo.png" style="max-width: 22rem; margin-top:1.5em">
+    </center>
+    </header>
+
+    <section id="quiz-container" class="container d-flex justify-content-center ">  
+        <form action="./cuestionario.html" id="dataAlumno" name="dataAlumno" method="post" >
+            <div id="box0" class="mb-3 questionBox border rounded-top rounded-bottom"  >
+                                
+                <div class="form-group m-4">
+                    <label for="nombreAlumno">Nombre</label>
+                    <input type="text" class="form-control mt-2" name="nombreAlumno" id="nombreAlumno" title="El nombre ingresado debe tene el formato adecuado." placeholder="Ingresa tu nombre"    minlength="3" maxlength="40" required>
+                </div>
+
+                <div class="form-group m-4">
+                    <label for="apellidoPaAlumno">Apellido Paterno</label>
+                    <input type="text" class="form-control mt-2" name="apellidoPaAlumno" id="apellidoPaAlumno" title="El apellido ingresado debe tene el formato adecuado." placeholder="Ingresa tu apellido paterno"  minlength="3" maxlength="40" required>
+                </div>
+
+                
+                <div class="form-group m-4">
+                    <label for="apellidoMaAlumno">Apellido Materno</label>
+                    <input type="text" class="form-control mt-2" id="apellidoMaAlumno" name="apellidoMaAlumno"  title="El apellido ingresado debe tene el formato adecuado."  placeholder="Ingresa tu apellido materno"     minlength="3" maxlength="40" required>
+                </div>
+
+                <div class="form-group m-4">
+                    <label for="GeneroAlumno">Genero</label>
+                    <div class="form-check mt-2">
+                        <input class="form-check-input" type="radio"  id="GeneroAlumno"  value="M" name="GeneroAlumno" required >
+                        <label class="form-check-label" for="flexRadioDefault1" >
+                            Masculino 
+                        </label>
+                    </div>
+                    <div class="form-check mt-2">
+                        <input class="form-check-input" type="radio" id="GeneroAlumno" value="F" name="GeneroAlumno" >
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Femenino
+                        </label>
+                    </div>
+
+
+                </div>
+
+
+                <div class="form-group m-4">
+                    <label for="edadAlumno">Edad</label>
+                    <input type="number" class="form-control mt-2" id="edadAlumno" name="edadAlumno" title="La edad ingresada debe tene el formato adecuado."placeholder="Ingrese su edad"    minlength="2" maxlength="2" required>
+                </div>
+
+                
+                <div class="form-group m-4">
+                    <label for="MatriculaAlumno">Matricula</label>
+                    <input type="tel" class="form-control mt-2" id="MatriculaAlumno" name="MatriculaAlumno"   title="El Matricula ingresada debe tene el formato adecuado." placeholder="Ingresa tu matrícula" minlength="4" maxlength="25" required>
+                </div>
+
+                
+
+                <div class="form-group m-4">
+                    <label for="CurpAlumno">CURP</label>
+                    <input type="text" class="form-control mt-2" id="CurpAlumno" name="CurpAlumno"  title="La CURP ingresada debe tene el formato adecuado." placeholder="Ingresa tu CURP"   minlength="18" maxlength="18" required>
+
+                </div>
+
+                <div class="form-group m-4">
+                    <select class="form-select "  id="programaEducativoAlumno" aria-label=".form-select-lg example" required >
+                        <option  value="0">Programa educativo al que pertences</option>
+                        <option value="1" >PE PROCESOS BIOALIMENTARIOS </option>
+                        <option value="2">PE AGRICULTURA SUSTENTABLE Y PROTEGIDA</option>
+                        <option value="3">PE MANTENIMIENTO INDUSTRIAL</option>
+                        <option value="4">PE PROCESOS INDUSTRIALES</option>
+                        <option value="5">PE CONTADURÍA</option>
+                        <option value="6">PE ADMINISTRACIÓN  </option>
+                        <option value="7">PE DESARROLLO DE NEGOCIOS Y MERCADOTECNIA</option>
+                        <option value="8">ING. EN TECNOLOGIAS DE LA INFORMACIÓN.</option>
+                        <option value="9">PE MECATRÓNICA.</option>
+                        
+
+                    </select>
+                </div>
+
+                <div class="form-group m-4">
+                    <select class="form-select "  id="CuatrimestreAlumno" name="CuatrimestreAlumno" aria-label=".form-select-lg example" required>
+                        <option  value="0">Cuestrimestre  que cursas</option>
+                        <option value="1" >1er cuatrimestre</option>
+                        <option value="2">2do cuatrimestre</option>
+                        <option value="3">3er cuestrimestre</option>
+                        <option value="4">4to. cuestrimestre</option>
+                        <option value="5">5to. cuestrimestre</option>
+                        <option value="6">6to. cuestrimestre</option>
+                        <option value="7">7mo. cuestrimestre</option>
+                        <option value="8">8vo. cuestrimestre</option>
+                        <option value="9">9no. cuestrimestre</option>
+                        <option value="10">10mo. cuestrimestre</option>
+                      
+
+                    </select>
+                </div>
+                
+
+                <div class="form-group m-4">
+                    <label for="TelefonoAlumno">Numero de telefono</label>
+                    <input type="tel" class="form-control mt-2" id="TelefonoAlumno" name="TelefonoAlumno" title="El numero de telefono ingresado debe tene el formato adecuado."  placeholder="Ingrese su numero de telefono"   minlength="10" maxlength="13" required>
+                </div>
 
-                <section id="quiz-container" class="container d-flex justify-content-center ">
+               
 
-                     
+           
+            
 
-                                <form action="" id="cuestionario_covid" name="cuestionario_covid" class="form   col-12  col-sm-9 col-md-7" >
-                                    <div id="box0" class="mb-3 questionBox border rounded-top rounded-bottom"  >
-                                        
-                                        <div class="form-group m-4">
-                                            <label for="nombreAlumno">Nombre</label>
-                                            <input type="text`" class="form-control mt-2" name="nombreAlumno" id="nombreAlumno" aria-describedby="emailHelp" placeholder="Ingresa tu nombre"  pattern="[A-Za-z]" required>
-                                        </div>
 
-                                        <div class="form-group m-4">
-                                            <label for="apellidoPaAlumno">Apellido Paterno</label>
-                                            <input type="text" class="form-control mt-2" name="apellidoPaAlumno" id="apellidoPaAlumno" aria-describedby="emailHelp" placeholder="Ingresa tu apellido paterno" pattern="[A-Za-z]" required>
-                                        </div>
+                <div class=" d-flex justify-content-end  me-2 mb-2">
+                    <button id="btn-next0"  onclick="senDataAlumno()" type="" class="btn form__buttom-next">Siguiente </button>
+                </div>
+            </div>
 
-                                        
-                                        <div class="form-group m-4">
-                                            <label for="apellidoMaAlumno">Apellido Materno</label>
-                                            <input type="text" class="form-control mt-2" id="apellidoMaAlumno" name="apellidoMaAlumno" aria-describedby="emailHelp" placeholder="Ingresa tu apellido materno"  pattern="[A-Za-z]" required>
-                                        </div>
 
-                                        <div class="form-group m-4">
-                                            <label for="GeneroAlumno">Genero</label>
-                                            <div class="form-check mt-2">
-                                                <input class="form-check-input" type="radio"  id="GeneroAlumno" value="M" name="GeneroAlumno" required >
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                    Masculino 
-                                                </label>
-                                            </div>
-                                            <div class="form-check mt-2">
-                                                <input class="form-check-input" type="radio" id="GeneroAlumno" value="F" name="GeneroAlumno" >
-                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                    Femenino
-                                                </label>
-                                            </div>
 
 
-                                        </div>
+        </form>
+        
+</section>
 
+    <footer class="col-lg-12 col-sm-12 col-12">
+        <img src="images/footer.png" style="width:100%;height: 150px;">
+    </footer>
 
-                                        <div class="form-group m-4">
-                                            <label for="edadAlumno">Edad</label>
-                                            <input type="number" class="form-control mt-2" id="edadAlumno" name="edadAlumno" pattern="[0-9]{2}" placeholder="Ingrese su edad" pattern="{17-19}"   maxlength="2" required>
-                                        </div>
+      
 
-                                        
-                                        <div class="form-group m-4">
-                                            <label for="MatriculaAlumno">Matricula</label>
-                                            <input type="number" class="form-control mt-2" id="MatriculaAlumno" name="MatriculaAlumno" pattern="[0-9]" placeholder="Ingresa tu matrícula" required>
-                                        </div>
 
-                                        
 
-                                        <div class="form-group m-4">
-                                            <label for="CurpAlumno">CURP</label>
-                                            <input type="texxt" class="form-control mt-2" id="CurpAlumno" name="CurpAlumno" pattern="[0-9]" placeholder="Ingresa tu matrícula" pattern="{17-19}"  minlength="18" required>
-                                        </div>
-
-                                        <div class="form-group m-4">
-                                            <select class="form-select "  id="programaEducativoAlumno" aria-label=".form-select-lg example">
-                                                <option selected value="0">Programa educativo al que pertences</option>
-                                                <option value="1">PE PROCESOS BIOALIMENTARIOS </option>
-                                                <option value="2">PE AGRICULTURA SUSTENTABLE Y PROTEGIDA</option>
-                                                <option value="3">PE MANTENIMIENTO INDUSTRIAL</option>
-                                                <option value="4">PE PROCESOS INDUSTRIALES</option>
-                                                <option value="5">PE CONTADURÍA</option>
-                                                <option value="6">PE ADMINISTRACIÓN  </option>
-                                                <option value="7">PE DESARROLLO DE NEGOCIOS Y MERCADOTECNIA</option>
-                                                <option value="8">ING. EN TECNOLOGIAS DE LA INFORMACIÓN.</option>
-                                                <option value="9">PE MECATRÓNICA.</option>
-                                                
-
-                                            </select>
-                                        </div>
-
-                                        <div class="form-group m-4">
-                                            <select class="form-select "  id="CuatrimestreAlumno" aria-label=".form-select-lg example">
-                                                <option selected value="0">Cuestrimestre  que cursas</option>
-                                                <option value="1">1er cuatrimestre</option>
-                                                <option value="2">2do cuatrimestre</option>
-                                                <option value="3">3er cuestrimestre</option>
-                                                <option value="4">4to. cuestrimestre</option>
-                                                <option value="5">5to. cuestrimestre</option>
-                                                <option value="6">6to. cuestrimestre</option>
-                                                <option value="7">7mo. cuestrimestre</option>
-                                                <option value="8">8vo. cuestrimestre</option>
-                                                <option value="9">9no. cuestrimestre</option>
-                                                <option value="10">10mo. cuestrimestre</option>
-                                              
-
-                                            </select>
-                                        </div>
-                                        
-
-                                        <div class="form-group m-4">
-                                            <label for="TelefonoAlumno">Numero de telefono</label>
-                                            <input type="number" class="form-control mt-2" id="TelefonoAlumno" name="TelefonoAlumno" pattern="[0-9]" placeholder="Ingrese su numero de telefono" pattern="{17-19}"  minlength="11" maxlength="13" required>
-                                        </div>
-
-                                       
-
-                                   
-                                    
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a id="btn-next0" type="" class="btn form__buttom-next">Siguiente </a>
-                                        </div>
-                                    </div>
-
-
-                                    <div id="box1" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;" >
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p >1. ¿Tienes alguna enfermedad crónica degenerativa?<br> (diabetes, hipertensión arterial, asma, lupus, artritis, tuberculosis, enfermedad pulmonar,cáncer) </p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p1" value="1"   required >
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                                        Si
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p1"  value="0"   >
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                       No
-                                                                </label>
-                                                            </div>
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a id="btn-next1" type="" class="btn form__buttom-next">Siguiente </a>
-                                        </div>
-                                    </div>
-
-                                    <div id="box2" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;" >
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">2.- ¿Cuál enfermedad crónica degenerativa padeces?</p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p2" id="flexRadioDefault1" value="Diabetes Mellitus" name="p2">
-                                                                <label class="form-check-label" for="flexRadioDefault1"  >
-                                                                    Diabetes Mellitus
-
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio"  id="flexRadioDefault1" value="Hipertensión Arterial" name="p2">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                                    Hipertensión Arterial
-
-                                                                </label>
-                                                            </div>
-                                                           
-                                                           
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio"  id="flexRadioDefault2" value="Cáncer" name="p2" >
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                    Cáncer
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio"  id="flexRadioDefault2" value=" Artritis Reumatoide." name="p2">
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                    Artritis Reumatoide.
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio"  id="flexRadioDefault2" value="Lupus Eritematoso sistémico" name="p2">
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                    Lupus Eritematoso sistémico
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio"  id="flexRadioDefault2" value="Otra" name="p2">
-                                                                <label class="form-check-label" for="flexRadioDefault2" >
-                                                                    Otra
-                                                                </label>
-                                                            </div>
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a  id="btn-next2" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-                                    <div id="box3" class="mb-3 questionBox border rounded-top rounded-bottom"  style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">3.-¿ Algún familiar o conocido o amigo ha estado enfermo de Covid -19 ? </p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio"  id="flexRadioDefault1" value="1" name="p3" required >
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                               Si 
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" id="flexRadioDefault2" value="0" name="p3" >
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                No
-                                                                </label>
-                                                            </div>
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a  id="btn-next3" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-
-                                    <div id="box4" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;" >
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">¿hace cuánto tiempo estuvo enfermo de covid-19?</p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p4" id="flexRadioDefault1" value="1 a 4 días">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                                    1 a 4 días
-                                                                </label>
-                                                            </div>
-
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p4" id="flexRadioDefault2" value="hace 5 a 7 días" >
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                    hace 5 a 7 días
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p4" id="flexRadioDefault2" value="  de 7 a 10 días" >
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                    de 7 a 10 días
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p4" id="flexRadioDefault2"  value=" ya hace 15 días">
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                    ya hace 15 días
-                                                                </label>
-                                                            </div>
-
-                                                            
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p4" id="flexRadioDefault2" value=" hace más de 1 unmes" >
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                    hace más de 1 un mes
-                                                                </label>
-                                                            </div>
-
-
-                                                            
-
-
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a id="btn-next4" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-
-                                    <div id="box5" class="mb-3  questionBox border rounded-top rounded-bottom" style="display: none;" >
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">5.-¿ Tú o algún miembro cercano de su familia, estuvo en contacto directo con él?  </p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p5" id="flexRadioDefault1" value="1">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                               Si 
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p5" id="flexRadioDefault2" value="0">
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                No
-                                                                </label>
-                                                            </div>
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a  id="btn-next5" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div id="box6" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">6.- ¿Te has sentido con cuerpo cortado o malestar corporal recientemente?</p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p6" id="flexRadioDefault1" value="1">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                               Si 
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p6" id="flexRadioDefault2" value="0">
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                    No
-                                                                </label>
-                                                            </div>
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a id="btn-next6" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div id="box7" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">7.-¿Has tenido fiebre?</p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p7" id="flexRadioDefault1" value="1" >
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                               Si 
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p7" id="flexRadioDefault2" value="0" >
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                No
-                                                                </label>
-                                                            </div>
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a id="btn-next7" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-                                    
-
-                                    <div id="box8" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">8.- ¿Has tenido Tos? </p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p8" id="flexRadioDefault1" value="1">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                               Si 
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p8" id="flexRadioDefault2" value="0">
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                No
-                                                                </label>
-                                                            </div>
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a id="btn-next8" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-
-                               
-
-                                    <div  id="box9" class="mb-3  questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">9.- ¿Has tenido malestar en la garganta ( dolor o irritación)?</p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p9" id="flexRadioDefault1">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                               Si 
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p9" id="flexRadioDefault2" >
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                No
-                                                                </label>
-                                                            </div>
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a id="btn-next9" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-
-                                    <div   id="box10" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">10.- ¿Tienes o tuviste recientemente gripe? </p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p10" id="flexRadioDefault1" value="1">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                               Si 
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p10" id="flexRadioDefault2" name="0" >
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                No
-                                                                </label>
-                                                            </div>
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a id="btn-next10" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div  id="box11" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">11.- ¿Tienes o has tenido dificultad para respirar?  </p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p11" id="flexRadioDefault1" value="1">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                               Si 
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p11" id="flexRadioDefault2" value="0">
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                No
-                                                                </label>
-                                                            </div>
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a  id="btn-next11" id="btn-next10" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-                                    <div  id="box12" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">12.- ¿Tienes o Has tenido algún síntoma gastrointestinal( diarrea, dolor abdominal )?</p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p12" id="flexRadioDefault1"  value="1">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                               Si 
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p12" id="flexRadioDefault2" value="0">
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                No
-                                                                </label>
-                                                            </div>
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a  id="btn-next12" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-
-                                    <div  id="box13" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">13.- Con referencia a las preguntas anteriores que hacen referencia a los síntomas ¿te has atendido con :</p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p13" id="flexRadioDefault1" value="Médico particular">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                                    Médico particular
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p13" id="flexRadioDefault2" value="Médico de (IMSS, ISSSTE, ISSSTEP, SSA)" >
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                    Médico de (IMSS, ISSSTE, ISSSTEP, SSA)
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p13" id="flexRadioDefault2" value="Te has auto medicado">
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                    Te has auto medicado
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p13" id="flexRadioDefault2" value="Nada" >
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                    Nada
-                                                                </label>
-                                                            </div>
-                                                         
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a id="btn-next13" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-                                    
-
-
-                                    <div  id="box14" class="mb-3  questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">14.- ¿Qué medio de transporte usas a diario?</p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                       
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p14" id="flexRadioDefault1" value="auto particular">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                                    AUTO PARTICULAR 
-                                                                </label>
-                                                            </div>
-
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p14" id="flexRadioDefault1" value="camión">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                                    camión 
-                                                                </label>
-                                                            </div>
-
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p14" id="flexRadioDefault2"  value="combi">
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                    COMBI
-                                                                </label>
-                                                            </div>
-
-                                                                                                   
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p14" id="flexRadioDefault1" value="motocicleta">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                                    Motocicleta
-                                                                </label>
-                                                            </div>
-                                       
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p14" id="flexRadioDefault1" value="biciicleta">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                                    BICICLETA 
-                                                                </label>
-                                                            </div>
-                                       
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p14" id="flexRadioDefault1" value="me traslado a Pie">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                                    ME TRASLADO A PIE 
-                                                                </label>
-                                                            </div>
-
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a id="btn-next14" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div  id="box15"class="mb-3  questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">15.- En las ultimas 2 semanas ¿ has asistido a algún acto o evento concurrido, (FIESTA , REUNIÓN, VELORIO, CURSO, CONGRESO,CONCIERTO)?</p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p15" id="flexRadioDefault1" value="1">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                               Si 
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p15" id="flexRadioDefault2"  value="0">
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                No
-                                                                </label>
-                                                            </div>
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a id="btn-next15" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-
-                                    <div  id="box16" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">16.- ¿ Ya estás vacunado contra el SARSCOV 2 ( COVID 19 ).</p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p16" id="flexRadioDefault1" value="1">
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                               Si 
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p16" id="flexRadioDefault2" value="0">
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                No
-                                                                </label>
-                                                            </div>
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a id="btn-next16" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-                                    <div  id="box16_1" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">Sube tu comprobante de vacunación</p>
-                                        </label>
-                                       
-                                             
-
-                                                  <div class="form-group m-4">
-                                                    <label for="CombrobanteVacunaAlumno">Comprobante de vacunación</label>
-                                                    <input type="file" class="form-control mt-2" id="CombrobanteVacunaAlumno" name="CombrobanteVacunaAlumno" pattern="[0-9]" placeholder="" accept="application/pdf" required>
-                                                    
-                                                    
-                                               
-                                                </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a id="btn-next16_1" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-
-
-                                    
-                                    <div  id="box17"class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">17.- ¿Tienes algún hábito o protocolo de higiene y desinfección al llegar a casa o al trabajo?</p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-4 mb-4">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p17" id="flexRadioDefault1" value="1"> 
-                                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                               Si 
-                                                                </label>
-                                                            </div>
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="radio" name="p17" id="flexRadioDefault2" value="0">
-                                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                                No
-                                                                </label>
-                                                            </div>
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-                                            <a  id="btn-next17" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-
-                                    <div  id="box18" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                        <label for="" class="form__labbel form-label mb-4 mt-2 ms-2">
-                                                <p class="">Menciona breve mente que realizas como higiene y desinfección al llegar a casa o en el trabajo diariamente.
-                                                </p>
-                                        </label>
-                                       
-                                                  <div class="form__options ms-3 me-3 mb-4 ">
-                                                    <textarea class="form-control" aria-label="With textarea" minlength="20" id="p18" name="p18" ></textarea>
-                                                     
-                                                  </div>
-
-
-                                        <div class=" d-flex justify-content-end  me-2 mb-2">
-
-
-                                            <a id="btn-next18" type="" class="btn form__buttom-next">Siguiente</a>
-                                        </div>
-                                    </div>
-
-
-                                    <div  id="box19" class="mb-3 questionBox border rounded-top rounded-bottom" style="display: none;">
-                                        
-                                      
-                                       <div class="m-4 text-center">
-                                        <h5>
-                                            Gracias por contestar la encuesta.
-                                            <br>
-                                            <strong>...</strong>
-                                        </h5>
-                                       </div>
-
-
-                                        <div class=" d-flex justify-content-center  me-2 mb-2">
-
-
-                                            <button id="btn-next19" type="" onclick="sendData();" class="btn form__buttom-send">Ver resultados</button>
-                                        </div>
-                                    </div>
-                    
-                                </form>
-                          
-                    
-
-                </section>
-
-
-
-
-
-
-                <footer class="col-lg-12 col-sm-12 col-12">
-                    <img src="images/footer.png" style="width:100%;height: 150px;">
-                </footer>
-
-   
-
-    <script type="text/javascript" src="js/functions.js">
-    </script>
-
+      <script type="text/javascript" src="js/functions.js">
+     </script>
     
 </body>
 </html>
