@@ -442,27 +442,7 @@ function changeVisibility(boxStay,boxNext)
     
             
            
-                //dataAlumno
-                let alumnoData=
-                {
-                    
-                    "nombre" : nombreAlumno,
-                    "apellidoPaterno": apellidoPaAlumnos,
-                    "apellidoMaterno": apellidoMaAlumno,
-                    "genero":generoAlumno,
-                    "edad":edadAlumno,
-                    "matricula":matriculaAlumno,
-                    "curp":curpAlumno,
-                    "programaEducativo":programaEducativoAlumno,
-                    "cuatrimestre":cuatrimestreAlumno,
-                    "numeroTelefono":numeroTelefono
-                    
-                   
-                   
-                };
-
-                console.log(alumnoData)
-                debugger;
+            
 
             }
 

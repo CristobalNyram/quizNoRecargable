@@ -15,7 +15,7 @@
 <body  id="quiz-body">
     <header class="header">
         <center>
-    <img src="images/logo.png" style="max-width: 22rem; margin-top:1.5em">
+    <img src="images/logo.png" style="max-width:18rem; margin-top:.5em">
     </center>
     </header>
 
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="form-group m-4">
-                    <label for="GeneroAlumno">Generó</label>
+                    <label for="GeneroAlumno">Género</label>
                     <div class="form-check mt-2">
                         <input class="form-check-input" type="radio"  id="GeneroAlumno"  value="M" name="GeneroAlumno" required >
                         <label class="form-check-label" for="flexRadioDefault1" >
@@ -65,8 +65,8 @@
 
                 
                 <div class="form-group m-4">
-                    <label for="MatriculaAlumno">Matricula</label>
-                    <input type="tel" class="form-control mt-2" id="MatriculaAlumno" name="MatriculaAlumno"   title="El Matricula ingresada debe tene el formato adecuado." placeholder="Ingresa tu matrícula" minlength="4" maxlength="25" required>
+                    <label for="MatriculaAlumno">Matrícula</label>
+                    <input type="numb" class="form-control mt-2" id="MatriculaAlumno" name="MatriculaAlumno"   title="El Matricula ingresada debe tene el formato adecuado." placeholder="Ingresa tu matrícula" minlength="4" maxlength="12" required>
                 </div>
 
                 
@@ -78,9 +78,9 @@
                 </div>
 
                 <div class="form-group m-4">
-                    <label for="programaEducativoAlumno"  class="mb-3">Programa educativo al que pertences</label>
-                    <select class="form-select "  id="programaEducativoAlumno" aria-label=".form-select-lg example" required >
-                        <option  value="0">Programa educativo al que pertences</option>
+                    <label for="programaEducativoAlumno"  class="mb-3">Programa educativo al que pertence</label>
+                    <select class="form-select "  id="programaEducativoAlumno" name="programaEducativoAlumno" aria-label=".form-select-lg example" required >
+                        <option  value="0">Programa educativo al que pertence</option>
                         <option value="1" >PE PROCESOS BIOALIMENTARIOS </option>
                         <option value="2">PE AGRICULTURA SUSTENTABLE Y PROTEGIDA</option>
                         <option value="3">PE MANTENIMIENTO INDUSTRIAL</option>
@@ -96,9 +96,9 @@
                 </div>
 
                 <div class="form-group m-4">
-                    <label for="CuatrimestreAlumno" class="mb-3">Cuestrimestre  que cursas</label>
+                    <label for="CuatrimestreAlumno" class="mb-3">Cuestrimestre</label>
                     <select class="form-select "  id="CuatrimestreAlumno" name="CuatrimestreAlumno" aria-label=".form-select-lg example" required>
-                        <option  value="0">Cuestrimestre  que cursas</option>
+                        <option  value="0">Cuestrimestre</option>
                         <option value="1" >1er cuatrimestre</option>
                         <option value="2">2do cuatrimestre</option>
                         <option value="3">3er cuestrimestre</option>
@@ -117,8 +117,8 @@
                 
 
                 <div class="form-group m-4">
-                    <label for="TelefonoAlumno">Número de telefono</label>
-                    <input type="tel" class="form-control mt-2" id="TelefonoAlumno" name="TelefonoAlumno" title="El numero de telefono ingresado debe tene el formato adecuado."  placeholder="Ingrese su numero de telefono"   minlength="10" maxlength="13" required>
+                    <label for="TelefonoAlumno">Número de teléfono </label>
+                    <input type="tel" class="form-control mt-2" id="TelefonoAlumno" name="TelefonoAlumno" title="El numero de teléfono  ingresado debe tene el formato adecuado."  placeholder="Ingrese su numero de telefono"   minlength="10" maxlength="13" required>
                 </div>
 
                
@@ -128,7 +128,7 @@
 
 
                 <div class=" d-flex justify-content-end  me-2 mb-2">
-                    <button id="btn-next0"  onclick="senDataAlumno()" type="" class="btn form__buttom-next">Siguiente </button>
+                    <button id="btn-next0"   type="" class="btn form__buttom-next">inicar encuesta </button>
                 </div>
             </div>
 
@@ -143,12 +143,120 @@
         <img src="images/footer.png" style="width:100%;height: 150px;">
     </footer>
 
-      
+    <script>
+        const formulario = document.getElementById('dataAlumno');
+
+        formulario.addEventListener('submit',(event)=>
+        {
+            //stop the refres of page
+            event.preventDefault();
+
+            const formData= new FormData(formulario);
+
+            const nombre =formData.get('nombreAlumno');
+            const apellidoPaterno =formData.get('apellidoPaAlumno');
+            const apellidoMaterno = formData.get('apellidoMaAlumno');
+            const GeneroAlumno =formData.get('GeneroAlumno');
+            const edadAlumno =formData.get('edadAlumno');
+            const MatriculaAlumno =formData.get('MatriculaAlumno');
+            const CurpAlumno = formData.get('CurpAlumno');
+            const programaEducativoAlumno = formData.get('programaEducativoAlumno');
+            const CuatrimestreAlumno = formData.get('CuatrimestreAlumno');
+            const TelefonoAlumno =formData.get('TelefonoAlumno');
+            
+            var valoresAceptados = /^[0-9]+$/;
+            var valoresAceptadosTexto=/^[0-9a-zA-Z]+$/;
+
+            // console.log(edadAlumno);
+            if(nombre == '' 
+                ||  apellidoPaterno =='' 
+                || apellidoMaterno == ''
+                ||  MatriculaAlumno =='' 
+                || CurpAlumno=='' 
+                || TelefonoAlumno=='' 
+            
+               
+                 )
+                {
+                    alertify.error('Debe de llenar todos los campos');
+                }
+                else
+                {
+
+                        if(CuatrimestreAlumno!=0)
+                        {
+                                    if(programaEducativoAlumno!=0)
+                                    {
+                                       
+                                        if(MatriculaAlumno.match(valoresAceptados))
+                                        {
+                                                if(edadAlumno.match(valoresAceptados) )
+                                                {
+                                                    if(edadAlumno>=100 || edadAlumno<=8 )
+                                                        {
+                                                            
+                                                            alertify.error('Ingrese una edad realista.');
+                                                        }
+                                                        else
+                                                        {
+                                                            let dataSendOfStudent=
+                                                            [
+                                                                nombre,
+                                                                apellidoPaterno,
+                                                                apellidoMaterno,
+                                                                GeneroAlumno,
+                                                                edadAlumno,
+                                                                MatriculaAlumno,
+                                                                CurpAlumno,
+                                                                programaEducativoAlumno,
+                                                                CuatrimestreAlumno,
+                                                                TelefonoAlumno
+                                                            ];
+
+                                                           
+
+                                                        }
+                                                }
+                                                else
+                                                {
+                                                    alertify.error('Ingrese la edad en un formato adecuado');
+
+                         
+                                                }
+                                            
+                                           
+                                        }
+                                        else
+                                        {
+                                                alertify.error('Ingrese la matrícula en un formato adecuado');
+
+                                        }
+                                    
+                                    }
+                                    else
+                                    {
+                                        alertify.error('Seleccione el programa educativo en que se encuentra');
+
+                                    }
+
+                        }
+                        else
+                        {
+                            alertify.error('Seleccione el cuatrimestre en que se encuentra');
+
+                        }
+                    
+                     
+                   
+                }
+
+        });
+
+
+    </script>      
 
 
 
-      <script type="text/javascript" src="js/functions.js">
-     </script>
     
 </body>
 </html>
